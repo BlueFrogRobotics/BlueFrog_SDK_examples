@@ -1,0 +1,10 @@
+﻿#BNF+EM V2.1;
+
+!grammar my_grammar;
+!language "French";
+!start <general> <volume> <yes> <no>;
+
+<general>: qu'est-ce que je peux dire | aide;
+<volume>: plus fort | moins fort | tais-toi;
+<yes>: [oui] (oui | d'accord | okay | très bien) [s'il te plaît | je veux bien | montre moi | très bien | d'accord] ;
+<no>: [non] (non | pas d'accord | surtout pas)  [s'il te plaît | pas maintenant | je ne veux pas | je n'ai pas envie | pas envie] ;

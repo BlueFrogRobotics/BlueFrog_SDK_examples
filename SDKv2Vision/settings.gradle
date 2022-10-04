@@ -1,0 +1,2 @@
+rootProject.name = "SDKv2Vision"
+include ':app'

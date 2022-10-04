@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_face"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bfr.sdkv2_vision.MainActivity">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="352dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:text="TRACKING"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="542dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:text="MOTION DETECTION"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="343dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:background="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:text="DETECTION"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camStatusBtn" />
+
+    <Button
+        android:id="@+id/buttonStartTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Start"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button_stopmotion"
+        android:layout_width="82dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="stop  detection"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/button_startmotion"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button_startmotion"
+        android:layout_width="93dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Start detection"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/buttonStopTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Stop"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonStartTracking"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button_getmotion"
+        android:layout_width="132dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="get motion"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/button_stopmotion"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextmotionThres"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="10.0"
+        app:layout_constraintStart_toEndOf="@+id/button_setmvtthres"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        tools:text="10.0" />
+
+    <Button
+        android:id="@+id/button_setmvtthres"
+        android:layout_width="200px"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Set Thres"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/button_getmotion"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/buttonGetTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Get tracking"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/buttonStopTracking"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/buttonStartCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:text="Start Cam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStopCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="80dp"
+        android:text="Stop Cam"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAprilTag"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="AprilTag"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonFaceDetect"
+        android:layout_width="95dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="20dp"
+        android:text="Face"
+        app:layout_constraintStart_toEndOf="@+id/buttonAprilTag"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonPersonDetect"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:text="Person"
+        app:layout_constraintStart_toEndOf="@+id/buttonFaceDetect"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/buttonColor"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:text="Color Recog"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/camStatusBtn"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStopCamera" />
+
+    <Button
+        android:id="@+id/camStatusBtn"
+        android:layout_width="109dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="4dp"
+        android:text="CAmera Status"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStopCamera" />
+
+    <ImageView
+        android:id="@+id/previewCam"
+        android:layout_width="323dp"
+        android:layout_height="227dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="182dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/buttonStartCamera"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="155dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.7"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/previewCam"
+        app:layout_constraintTop_toBottomOf="@+id/previewCam">
+
+        <RadioButton
+            android:id="@+id/noneRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/cameraFrameRadio"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="Camera Frame" />
+
+        <RadioButton
+            android:id="@+id/cvFrameRadio"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="CV Frame" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

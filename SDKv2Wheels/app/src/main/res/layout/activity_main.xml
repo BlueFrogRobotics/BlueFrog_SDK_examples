@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_face"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    tools:context="com.bfr.sdkv2_wheels.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00D4D1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#CC00D4D1"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".35"
+            android:background="@drawable/main_layout"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".25"
+                android:background="@drawable/rectangle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/TVmoveForwardTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Move Forward"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/TVmoveForwardTitle"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedMvF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVmoveForwardTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="Choose speed : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedMvF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedMvF"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-0.7 to 0.7 m/s"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/TVchooseDistMvF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EDchooseSpeedMvF"
+                    android:layout_marginTop="10dp"
+                    android:text="Choose distance : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseDistMvF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseDistMvF"
+                    android:layout_marginTop="-5dp"
+                    android:hint="0.1 to 20.0 m"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/BstartMvF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".25"
+                android:background="@drawable/rectangle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/TVnonStopMvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Non Stop Move"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/TVnonStopMvTitle"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedNonSMv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVnonStopMvTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="Choose speed : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedNonSMv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedNonSMv"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-0.7 to 0.7 m/s"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/BstartNonSMv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".25"
+                android:background="@drawable/rectangle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/TVturnTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Turn"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/TVturnTitle"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVturnTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="Choose speed : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedTurn"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-360 to 360 °/s"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/TVchooseAngleTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EDchooseSpeedTurn"
+                    android:layout_marginTop="10dp"
+                    android:text="Choose angle : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseAngleTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseAngleTurn"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-360° to 360° "
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/BstartTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight=".25"
+                android:background="@drawable/rectangle"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <TextView
+                    android:id="@+id/TVnonStopTurnTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Non Stop Turn"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/TVnonStopTurnTitle"
+                    android:layout_marginTop="5dp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedNonSTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVnonStopTurnTitle"
+                    android:layout_marginTop="15dp"
+                    android:text="Choose speed : "
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedNonSTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedNonSTurn"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-360 to 360 °/s"
+                    android:imeOptions="actionDone"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/BstartNonSTurn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".85"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="#CC000000">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33">
+
+                <Switch
+                    android:id="@+id/SWenableLW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Enable Left Wheel"
+                    android:theme="@style/switchCustom"/>
+
+                <TextView
+                    android:id="@+id/TVenableStatusLW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SWenableLW"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Status : " />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33">
+
+                <Button
+                    android:id="@+id/BstopMotors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button"
+                    android:text="Stop Motors" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.33">
+
+                <Switch
+                    android:id="@+id/SWenableRW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Enable Right Wheel"
+                    android:theme="@style/switchCustom"/>
+
+                <TextView
+                    android:id="@+id/TVenableStatusRW"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SWenableRW"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="#FFFFFF"
+                    android:text="Status : " />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_face"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    tools:context="com.bfr.sdkv2_head.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00D4D1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="#CC00D4D1"
+            android:textSize="20dp"
+            android:gravity="center_horizontal"
+            tools:ignore="MissingConstraints" />
+
+
+        <LinearLayout
+            android:layout_weight=".30"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:background="@drawable/main_layout">
+
+
+            <RelativeLayout
+                android:layout_weight=".25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle">
+
+                <TextView
+                    android:id="@+id/TVGoToYESAngleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="Go to YES angle"
+                    android:textSize="18dp"/>
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:background="#000000"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/TVGoToYESAngleTitle"/>
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVGoToYESAngleTitle"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:text="Choose speed : " />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedGTYA"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-49 to 49 °/s"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <TextView
+                    android:id="@+id/TVchooseAngleGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EDchooseSpeedGTYA"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:text="Choose angle : " />
+
+                <EditText
+                    android:id="@+id/EDchooseAngleGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseAngleGTYA"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-45° to 45°"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <Button
+                    android:id="@+id/BstartGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_above="@+id/BstopGTYA"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/BstopGTYA"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Stop" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight=".25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/rectangle">
+
+                <TextView
+                    android:id="@+id/TVYESMoveTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="YES Move"
+                    android:textSize="18dp"/>
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:background="#000000"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/TVYESMoveTitle"/>
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedYM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVYESMoveTitle"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:text="Choose speed : " />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedYM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedYM"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-49 to 49 °/s"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <Button
+                    android:id="@+id/BstartYM"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_above="@+id/BstopYM"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/BstopYM"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Stop" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight=".25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/rectangle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/TVGoToNOAngleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="Go to NO angle"
+                    android:textSize="18dp"/>
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:background="#000000"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/TVGoToNOAngleTitle"/>
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedGTNA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVGoToNOAngleTitle"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:text="Choose speed : " />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedGTNA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedGTNA"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-140 to 140 °/s"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <TextView
+                    android:id="@+id/TVchooseAngleGTNA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EDchooseSpeedGTNA"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#000000"
+                    android:text="Choose angle : " />
+
+                <EditText
+                    android:id="@+id/EDchooseAngleGTNA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseAngleGTNA"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-90° to 90° "
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <Button
+                    android:id="@+id/BstartGTNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_above="@+id/BstopGTNO"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/BstopGTNO"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Stop" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight=".25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@drawable/rectangle"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp">
+
+                <TextView
+                    android:id="@+id/TVNOMoveTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:text="NO Move"
+                    android:textSize="18dp"/>
+
+                <View
+                    android:layout_width="320dp"
+                    android:layout_height="2dp"
+                    android:background="#000000"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/TVNOMoveTitle"/>
+
+                <TextView
+                    android:id="@+id/TVchooseSpeedNM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVNOMoveTitle"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000000"
+                    android:text="Choose speed : " />
+
+                <EditText
+                    android:id="@+id/EDchooseSpeedNM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVchooseSpeedNM"
+                    android:layout_marginTop="-5dp"
+                    android:hint="-140 to 140 °/s"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"/>
+
+                <Button
+                    android:id="@+id/BstartNM"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_above="@+id/BstopNM"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Start" />
+
+                <Button
+                    android:id="@+id/BstopNM"
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button"
+                    android:gravity="center"
+                    android:text="Stop" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".85"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:background="#CC000000">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45">
+
+                <Switch
+                    android:id="@+id/SWenableYES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"
+                    android:text="Enable Yes move"
+                    android:theme="@style/switchCustom"/>
+
+                <TextView
+                    android:id="@+id/TVenableStatusYES"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SWenableYES"
+                    android:layout_marginTop="2dp"
+                    android:layout_alignStart="@+id/SWenableYES"
+                    android:textColor="#FFFFFF"
+                    android:text="Status : " />
+
+                <TextView
+                    android:id="@+id/TVYesPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVenableStatusYES"
+                    android:layout_alignStart="@+id/TVenableStatusYES"
+                    android:layout_marginTop="6dp"
+                    android:text="YES Motor position : "
+                    android:textColor="#FFFFFF" />
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.45">
+
+                <Switch
+                    android:id="@+id/SWenableNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="0dp"
+                    android:text="Enable No move"
+                    android:theme="@style/switchCustom"/>
+
+                <TextView
+                    android:id="@+id/TVenableStatusNO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/SWenableNO"
+                    android:layout_alignStart="@+id/SWenableNO"
+                    android:layout_marginTop="2dp"
+                    android:text="Status : "
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/TVNoPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/TVenableStatusNO"
+                    android:layout_alignStart="@+id/TVenableStatusNO"
+                    android:layout_marginTop="6dp"
+                    android:text="NO Motor position : "
+                    android:textColor="#FFFFFF" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
