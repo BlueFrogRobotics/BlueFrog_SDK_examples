@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_face"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80FFFFFF"
+    tools:context="com.bfr.grafcetexample.MainActivity">
+
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="126dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="RESET"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/startChckBx"
+        app:layout_constraintTop_toBottomOf="@+id/startChckBx" />
+
+    <CheckBox
+        android:id="@+id/startChckBx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="112dp"
+        android:text="Check/Uncheck to start/stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/enableSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Enable wheels"
+        app:layout_constraintStart_toStartOf="@+id/resetBtn"
+        app:layout_constraintTop_toBottomOf="@+id/resetBtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

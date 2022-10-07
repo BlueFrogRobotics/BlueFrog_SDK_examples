@@ -1,0 +1,2 @@
+rootProject.name = "SequenceExampleSDKv2"
+include ':app'

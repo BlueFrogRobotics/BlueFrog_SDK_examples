@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.4'
+
+    }
+
+    def gradleCredentials = "credentials.gradle"
+    if (project.file(gradleCredentials).exists()) {
+        apply from: gradleCredentials
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+        maven { url 'https://jitpack.io' }
+        maven {
+            url "https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-release-local/"
+            credentials {
+                username "${maven_user}"
+                password "${maven_password}"
+            }
+        }
+    }
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked"
+    }
+}
+
+subprojects {
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+task showMeCache doLast() {
+    println maven_password
+}

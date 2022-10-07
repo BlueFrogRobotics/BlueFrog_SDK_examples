@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bfr.grafcetexample">
+
+    <uses-permission android:name="com.bfr.buddy.resource.SPEECH" />
+    <uses-permission android:name="com.bfr.buddy.resource.LISTEN" />
+    <uses-permission android:name="com.bfr.buddy.resource.WHEELS" />
+    <uses-permission android:name="com.bfr.buddy.resource.HEAD" />
+    <uses-permission android:name="com.bfr.buddy.resource.LEDS" />
+    <uses-permission android:name="com.bfr.buddy.resource.SENSOR_MODULE" />
+    <uses-permission android:name="com.bfr.buddy.resource.FACE" />
+    <uses-permission android:name="com.bfr.buddy.resource.GUI" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="SDKv2Sequence"
+        android:name="com.bfr.grafcetexample.AppActivity"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/BuddyTheme"
+        android:supportsRtl="true">
+
+        <activity
+            android:name="com.bfr.grafcetexample.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
