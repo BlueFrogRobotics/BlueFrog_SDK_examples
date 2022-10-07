@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.example.grafcetexample"
+        applicationId "com.bfr.grafcetexample"
         minSdk 28
         targetSdk 31
         versionCode 1
