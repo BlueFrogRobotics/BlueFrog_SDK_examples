@@ -3,14 +3,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('D:\\Travail\\Bluefrog\\Misc\\SDK\\Android\\BlueFrog_SDKv2\\SDKv2Examples\\SDKv2TTS\\app\\keystore.jks')
-            storePassword 'android'
-            keyAlias 'platform'
-            keyPassword 'android'
-        }
-    }
     compileSdk 31
 
     defaultConfig {
@@ -27,7 +19,6 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
         }
     }
     compileOptions {
