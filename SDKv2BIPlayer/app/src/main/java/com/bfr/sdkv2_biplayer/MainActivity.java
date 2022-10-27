@@ -5,6 +5,7 @@ import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.RemoteException;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -14,6 +15,7 @@ import android.widget.VideoView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.bfr.buddy.usb.shared.IUsbCommadRsp;
 import com.bfr.buddy.utils.events.EventItem;
 import com.bfr.buddysdk.BuddyActivity;
 import com.bfr.buddysdk.BuddySDK;
@@ -81,6 +83,30 @@ public class MainActivity extends BuddyActivity implements OnRunInstructionListe
         Log.d(TAG, "SDK Ready");
         BuddySDK.UI.setViewAsFace(findViewById(R.id.view_face));
 
+        //enable motors
+        BuddySDK.USB.enableWheels(1, 1, new IUsbCommadRsp.Stub() {
+            @Override
+            public void onSuccess(String s) throws RemoteException { Log.i(TAG, "Wheels enabled");}
+
+            @Override
+            public void onFailed(String s) throws RemoteException {  Log.e(TAG, "Wheels not enabled");}
+        });
+        BuddySDK.USB.enableYesMove(1, new IUsbCommadRsp.Stub() {
+            @Override
+            public void onSuccess(String s) throws RemoteException {Log.i(TAG, "Yes enabled");}
+
+            @Override
+            public void onFailed(String s) throws RemoteException {Log.e(TAG, "Wheels not enabled");}
+        });
+        BuddySDK.USB.enableNoMove(1, new IUsbCommadRsp.Stub() {
+            @Override
+            public void onSuccess(String s) throws RemoteException {Log.i(TAG, "No enabled");}
+
+            @Override
+            public void onFailed(String s) throws RemoteException {Log.e(TAG, "No not enabled");}
+        });
+
+
         interpreter = new BehaviourInterpreter();
 
         // dir where the BI are
@@ -88,9 +114,7 @@ public class MainActivity extends BuddyActivity implements OnRunInstructionListe
         // Get all comportemental in folder
         try {
             Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
-//             String[] listOfBI =  Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
-//             for (int i=0; i<listOfBI.length; i++)
-//                 Log.i(TAG, "BI found on device: " + listOfBI[i]);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
