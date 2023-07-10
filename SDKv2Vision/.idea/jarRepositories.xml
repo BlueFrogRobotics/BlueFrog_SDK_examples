@@ -12,9 +12,19 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="MavenRepo" />
+      <option name="name" value="MavenRepo" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="maven2" />
       <option name="name" value="maven2" />
-      <option name="url" value="https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-release-local/" />
+      <option name="url" value="https://newtronlabs.jfrog.io/artifactory/libs-release-local" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="mavenNewtronProd" />
+      <option name="name" value="mavenNewtronProd" />
+      <option name="url" value="https://newtronlabs.jfrog.io/artifactory/libs-doc" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="BintrayJCenter" />
@@ -34,12 +44,12 @@
     <remote-repository>
       <option name="id" value="maven2" />
       <option name="name" value="maven2" />
-      <option name="url" value="https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-release-local2/" />
+      <option name="url" value="https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-snapshot-local/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven2" />
       <option name="name" value="maven2" />
-      <option name="url" value="https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-snapshot-local/" />
+      <option name="url" value="https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-release-local/" />
     </remote-repository>
   </component>
 </project>
