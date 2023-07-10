@@ -64,35 +64,6 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>20</float>
-						</YesAngle>
-						<NoAngle>
-							<float>0</float>
-						</NoAngle>
-						<YesSpeed>
-							<float>60</float>
-						</YesSpeed>
-						<NoSpeed>
-							<float>0</float>
-						</NoSpeed>
-					</MoveHeadBehaviourInstruction>
-					<MoveHeadBehaviourInstruction>
-						<Delay>
-							<float>0</float>
-						</Delay>
-						<IsBlocking>
-							<boolean>true</boolean>
-						</IsBlocking>
-						<IsRequired>
-							<boolean>false</boolean>
-						</IsRequired>
-						<Position>
-							<position>CENTER</position>
-						</Position>
-						<CustomMove>
-							<boolean>true</boolean>
-						</CustomMove>
-						<YesAngle>
 							<float>-20</float>
 						</YesAngle>
 						<NoAngle>
@@ -123,6 +94,35 @@
 						</CustomMove>
 						<YesAngle>
 							<float>20</float>
+						</YesAngle>
+						<NoAngle>
+							<float>0</float>
+						</NoAngle>
+						<YesSpeed>
+							<float>60</float>
+						</YesSpeed>
+						<NoSpeed>
+							<float>0</float>
+						</NoSpeed>
+					</MoveHeadBehaviourInstruction>
+					<MoveHeadBehaviourInstruction>
+						<Delay>
+							<float>0</float>
+						</Delay>
+						<IsBlocking>
+							<boolean>true</boolean>
+						</IsBlocking>
+						<IsRequired>
+							<boolean>false</boolean>
+						</IsRequired>
+						<Position>
+							<position>CENTER</position>
+						</Position>
+						<CustomMove>
+							<boolean>true</boolean>
+						</CustomMove>
+						<YesAngle>
+							<float>-20</float>
 						</YesAngle>
 						<NoAngle>
 							<float>0</float>
@@ -196,7 +196,7 @@
 				<Volume>
 				  <int>100</int>
 				</Volume>
-					<Utterance><text> </text></Utterance><Key><text /></Key></SayBehaviourInstruction>
+					<Utterance><text> </text></Utterance></SayBehaviourInstruction>
 				</SubInstructions>
 			</SynchronizedBlockBehaviourInstruction>
 		</Instructions>

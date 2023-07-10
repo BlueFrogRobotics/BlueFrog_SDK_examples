@@ -59,7 +59,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>-3.40282347E+38</float>
+					<float>3.40282347E+38</float>
 				</YesAngle>
 				<NoAngle>
 					<float>40</float>
@@ -102,7 +102,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>-3.40282347E+38</float>
+					<float>3.40282347E+38</float>
 				</YesAngle>
 				<NoAngle>
 					<float>0</float>

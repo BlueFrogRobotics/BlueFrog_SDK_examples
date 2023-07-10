@@ -81,7 +81,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>15</float>
+							<float>-15</float>
 						</YesAngle>
 						<NoAngle>
 							<float>10</float>
@@ -152,7 +152,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>-30</float>
+							<float>30</float>
 						</YesAngle>
 						<NoAngle>
 							<float>-10</float>
@@ -229,7 +229,7 @@
 				<Volume>
 				  <int>100</int>
 				</Volume>
-					<Utterance><text> </text></Utterance><Key><text /></Key></SayBehaviourInstruction>
+					<Utterance><text> </text></Utterance></SayBehaviourInstruction>
 				</SubInstructions>
 			</SynchronizedBlockBehaviourInstruction>
 		</Instructions>

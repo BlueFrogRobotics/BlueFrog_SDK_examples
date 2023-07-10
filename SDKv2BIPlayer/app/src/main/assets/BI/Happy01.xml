@@ -8,7 +8,8 @@
 	</Settings>
 	<Algorithm>
 		<Instructions>
-			<SynchronizedBlockBehaviourInstruction line="A"><IsBlocking><boolean>true</boolean></IsBlocking><SubInstructions><SetMoodBehaviourInstruction>
+			<SynchronizedBlockBehaviourInstruction line="A"><IsBlocking><boolean>true</boolean></IsBlocking><SubInstructions>
+				<SetMoodBehaviourInstruction>
 				<IsBlocking>
 					<boolean>false</boolean>
 				</IsBlocking>
@@ -88,7 +89,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>40</float>
+					<float>-40</float>
 				</YesAngle>
 				<NoAngle>
 					<float>-3.40282347E+38</float>
@@ -117,7 +118,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>-3.40282347E+38</float>
+					<float>3.40282347E+38</float>
 				</YesAngle>
 				<NoAngle>
 					<float>-20</float>
@@ -163,7 +164,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>10</float>
+					<float>-10</float>
 				</YesAngle>
 				<NoAngle>
 					<float>-3.40282347E+38</float>
@@ -192,7 +193,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>40</float>
+					<float>-40</float>
 				</YesAngle>
 				<NoAngle>
 					<float>-3.40282347E+38</float>
@@ -221,7 +222,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>10</float>
+					<float>-10</float>
 				</YesAngle>
 				<NoAngle>
 					<float>-3.40282347E+38</float>
@@ -250,7 +251,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>-3.40282347E+38</float>
+					<float>3.40282347E+38</float>
 				</YesAngle>
 				<NoAngle>
 					<float>20</float>
@@ -279,7 +280,7 @@
 					<boolean>true</boolean>
 				</CustomMove>
 				<YesAngle>
-					<float>-3.40282347E+38</float>
+					<float>3.40282347E+38</float>
 				</YesAngle>
 				<NoAngle>
 					<float>0</float>

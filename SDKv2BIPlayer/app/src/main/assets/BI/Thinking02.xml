@@ -57,7 +57,6 @@
 						<Delay>
 							<float>0</float>
 						</Delay>
-						<FileName />
 						<SoundSample>
 							<sound>RANDOM_CURIOUS</sound>
 						</SoundSample>
@@ -79,7 +78,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>-20</float>
+							<float>20</float>
 						</YesAngle>
 						<NoAngle>
 							<float>-40</float>
@@ -111,7 +110,6 @@
 						<Delay>
 							<float>2</float>
 						</Delay>
-						
 						<SoundSample>
 							<sound>RANDOM_CURIOUS</sound>
 						</SoundSample>
@@ -133,7 +131,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>10</float>
+							<float>-10</float>
 						</YesAngle>
 						<NoAngle>
 							<float>0</float>
@@ -162,7 +160,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>-10</float>
+							<float>10</float>
 						</YesAngle>
 						<NoAngle>
 							<float>0</float>
@@ -232,7 +230,7 @@
 							<boolean>true</boolean>
 						</CustomMove>
 						<YesAngle>
-							<float>20</float>
+							<float>-20</float>
 						</YesAngle>
 						<NoAngle>
 							<float>40</float>

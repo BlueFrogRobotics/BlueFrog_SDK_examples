@@ -26,7 +26,7 @@
           <Name class="java.lang.String">eyeposa</Name>
         </Position>
         <YesAngle>
-          <float>0</float>
+          <float>-0</float>
           <Name class="java.lang.String">yesposa</Name>
         </YesAngle>
         <YesSpeed>
@@ -97,7 +97,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>0</float>
+          <float>-0</float>
           <Name class="java.lang.String">yesposb</Name>
         </YesAngle>
         <YesSpeed>

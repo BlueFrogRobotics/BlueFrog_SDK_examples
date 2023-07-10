@@ -37,7 +37,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>20.0</float>
+          <float>-20.0</float>
           <Name class="java.lang.String">yespos</Name>
         </YesAngle>
         <YesSpeed>

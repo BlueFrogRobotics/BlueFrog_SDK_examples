@@ -16,7 +16,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>30</float>
+          <float>-30</float>
         </YesAngle>
         <YesSpeed>
           <float>10</float>
@@ -71,7 +71,7 @@
           <boolean>false</boolean>
         </IsBlocking>
         <SoundSample>
-          <sound>CURIOUS_01</sound>
+          <sound>CURIOUS_1</sound>
         </SoundSample>
       <FileName><text /></FileName></PlaySoundBehaviourInstruction>
 
@@ -115,7 +115,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>10</float>
+          <float>-10</float>
         </YesAngle>
         <YesSpeed>
           <float>20</float>

@@ -19,7 +19,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>30</float>
+          <float>-30</float>
         </YesAngle>
         <YesSpeed>
           <float>20</float>
@@ -97,7 +97,7 @@
           <boolean>true</boolean>
         </CustomMove>
         <YesAngle>
-          <float>10</float>
+          <float>-10</float>
         </YesAngle>
         <YesSpeed>
           <float>20</float>

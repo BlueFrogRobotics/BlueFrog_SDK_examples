@@ -35,7 +35,6 @@
 				<Key>
 					<text>introjoke</text>
 				</Key>
-				<Utterance><text /></Utterance>
 				<Pitch>
               <int>100</int>
 				</Pitch>
@@ -59,7 +58,6 @@
 				<Key>
 					<text>joke</text>
 				</Key>
-				<Utterance><text /></Utterance>
 				<Pitch>
               <int>100</int>
 				</Pitch>

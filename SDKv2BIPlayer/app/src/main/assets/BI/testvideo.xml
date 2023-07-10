@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BehaviourAlgorithmStorage xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Settings>
+    <Category/>
+    <Mood>NEUTRAL</Mood>
+    <Commitment>NOT_ENGAGED</Commitment>
+    <MovementPattern>COMPLETE_FREEDOM</MovementPattern>
+  </Settings>
+  <Algorithm>
+    <Instructions>
+      <SynchronizedBlockBehaviourInstruction line="A">
+        <IsBlocking>
+          <boolean>true</boolean>
+        </IsBlocking>
+        <SubInstructions>
+          <SayBehaviourInstruction>
+            <IsBlocking>
+              <boolean>true</boolean>
+            </IsBlocking>
+            <Delay>
+              <float>0</float>
+            </Delay>
+            <Key>
+              <text> </text>
+            </Key>
+            <Utterance>
+              <text>Bonjour voici une vidéo</text>
+            </Utterance>
+            <Pitch>
+              <int>100</int>
+            </Pitch>
+            <Speed>
+              <int>100</int>
+            </Speed>
+            <Volume>
+              <int>100</int>
+            </Volume>
+          </SayBehaviourInstruction>
+          <DisplayImageBehaviourInstruction>
+            <IsBlocking>
+              <boolean>true</boolean>
+            </IsBlocking>
+            <Delay>
+              <float>0</float>
+            </Delay>
+            <Duration>
+              <float>4</float>
+            </Duration>
+            <FileName>
+              <text>MaliceSauveChiens.mp4</text>
+            </FileName>
+          </DisplayImageBehaviourInstruction>
+        </SubInstructions>
+      </SynchronizedBlockBehaviourInstruction>
+    </Instructions>
+  </Algorithm>
+</BehaviourAlgorithmStorage>
