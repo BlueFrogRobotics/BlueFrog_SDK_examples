@@ -37,6 +37,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -148,7 +149,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             myscheduler.scheduleWithFixedDelay(new Runnable() {
                 @Override
                 public void run() {
-                    if (isreadingBI == false) {
+                    if (!isreadingBI) {
 
                         Log.w(TAG, "Run " + BINames.get(BIidx).toUpperCase());
                         // affect name of BI to read
@@ -176,7 +177,11 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             String category = editCategory.getText().toString();
             //interpreter.RunRandom(this, category, this, this, imageView, videoView);
             try{
-            biTask = BuddySDK.Companion.createBICategoryTask(category, videoView, imageView);
+            HashMap<String, String> biParameters = new HashMap<>();
+            biParameters.put("mood", "GRUMPY");
+            biParameters.put("parole", "test category");
+            biParameters.put("angle", "-55");
+            biTask = BuddySDK.Companion.createBICategoryTask(category, videoView, imageView, true, null, biParameters);
             biTask.start(new TaskCallback() {
                 @Override
                 public void onStarted() {
@@ -294,7 +299,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             myscheduler.scheduleWithFixedDelay(new Runnable() {
                 @Override
                 public void run() {
-                    if (isreadingBI == false) {
+                    if (!isreadingBI) {
 
                         Log.w(TAG, "Run " + BINames.get(BIidx).toUpperCase());
                         // affect name of BI to read
@@ -333,8 +338,11 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         Log.i(TAG, "Runbehaviour Attempting " + biName);
 
         try {
-
-            biTask = BuddySDK.Companion.createBITask(fileName, videoView, imageView, true);
+            HashMap<String, String> biParameters = new HashMap<>();
+            biParameters.put("mood", "ANGRY");
+            biParameters.put("parole", "Je suis buddy");
+            biParameters.put("angle", "5hr5etg");
+            biTask = BuddySDK.Companion.createBITask(fileName, videoView, imageView, true, null, biParameters);
             biTask.start(new TaskCallback() {
                 @Override
                 public void onStarted() {
