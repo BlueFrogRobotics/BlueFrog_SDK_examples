@@ -51,6 +51,12 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
     private EditText BItoPlayFrom;
     private EditText editCategory;
 
+
+    private EditText editParameterName1;
+    private EditText editParameterValue1;
+    private EditText editParameterName2;
+    private EditText editParameterValue2;
+
     private final int  STORAGE_PERMISSION_CODE = 101;
 
     // List of indexes
@@ -84,6 +90,11 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         editCategory.setImeOptions(IME_ACTION_DONE);
 
         ongoingBI = findViewById(R.id.ongoingBI);
+
+        editParameterName1=findViewById(R.id.biParamName1);
+        editParameterValue1=findViewById(R.id.biParamValue1);
+        editParameterName2=findViewById(R.id.biParamName2);
+        editParameterValue2=findViewById(R.id.biParamValue2);
 
         checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
 
@@ -175,12 +186,12 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             ImageView imageView =findViewById(R.id.imageView);
             PlayerView videoView=findViewById(R.id.videoView);
             String category = editCategory.getText().toString();
-            //interpreter.RunRandom(this, category, this, this, imageView, videoView);
             try{
             HashMap<String, String> biParameters = new HashMap<>();
-            biParameters.put("mood", "GRUMPY");
-            biParameters.put("parole", "test category");
-            biParameters.put("angle", "-55");
+            if(!editParameterName1.getText().toString().isEmpty())
+                biParameters.put(editParameterName1.getText().toString(), editParameterValue1.getText().toString());
+            if(!editParameterName2.getText().toString().isEmpty())
+                biParameters.put(editParameterName2.getText().toString(), editParameterValue2.getText().toString());
             biTask = BuddySDK.Companion.createBICategoryTask(category, videoView, imageView, true, null, biParameters);
             biTask.start(new TaskCallback() {
                 @Override
@@ -334,14 +345,14 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         String docPath = "";
 
         String fileName =  biName;
-        //File source = new File(fileName.replace(".xml", "")+".xml");
         Log.i(TAG, "Runbehaviour Attempting " + biName);
 
         try {
             HashMap<String, String> biParameters = new HashMap<>();
-            biParameters.put("mood", "ANGRY");
-            biParameters.put("parole", "Je suis buddy");
-            biParameters.put("angle", "5hr5etg");
+            if(!editParameterName1.getText().toString().isEmpty())
+                biParameters.put(editParameterName1.getText().toString(), editParameterValue1.getText().toString());
+            if(!editParameterName2.getText().toString().isEmpty())
+                biParameters.put(editParameterName2.getText().toString(), editParameterValue2.getText().toString());
             biTask = BuddySDK.Companion.createBITask(fileName, videoView, imageView, true, null, biParameters);
             biTask.start(new TaskCallback() {
                 @Override
