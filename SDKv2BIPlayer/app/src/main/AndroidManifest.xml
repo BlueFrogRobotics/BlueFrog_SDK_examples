@@ -10,6 +10,7 @@
     <uses-permission android:name="com.bfr.buddy.resource.SENSOR_MODULE" />
     <uses-permission android:name="com.bfr.buddy.resource.FACE" />
     <uses-permission android:name="com.bfr.buddy.resource.GUI" />
+    <uses-permission android:name="com.bfr.buddy.resource.BI_SOUND" />
 
     <application
         android:allowBackup="true"
