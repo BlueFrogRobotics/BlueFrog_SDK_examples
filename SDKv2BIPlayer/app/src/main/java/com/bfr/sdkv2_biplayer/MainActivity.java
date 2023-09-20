@@ -187,6 +187,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             PlayerView videoView=findViewById(R.id.videoView);
             String category = editCategory.getText().toString();
             try{
+            //we set the parameters of the BI
             HashMap<String, String> biParameters = new HashMap<>();
             if(!editParameterName1.getText().toString().isEmpty())
                 biParameters.put(editParameterName1.getText().toString(), editParameterValue1.getText().toString());
@@ -348,6 +349,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         Log.i(TAG, "Runbehaviour Attempting " + biName);
 
         try {
+            //we set the parameters of the BI
             HashMap<String, String> biParameters = new HashMap<>();
             if(!editParameterName1.getText().toString().isEmpty())
                 biParameters.put(editParameterName1.getText().toString(), editParameterValue1.getText().toString());
