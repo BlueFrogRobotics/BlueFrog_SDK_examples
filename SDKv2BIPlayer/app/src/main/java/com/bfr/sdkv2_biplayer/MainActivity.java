@@ -127,15 +127,13 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         // Get all comportemental in folder
         try {
             Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
-//             String[] listOfBI =  Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
-//             for (int i=0; i<listOfBI.length; i++)
-//                 Log.i(TAG, "BI found on device: " + listOfBI[i]);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
         pathnames = dir.list();
         // populate list
-        int numOfBI =0;
+
         for (int i = 0; i < pathnames.length; i++)
         {
             // if the file is an xml (BI)
@@ -152,7 +150,6 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
 
         /*** play all BI ***/
         findViewById(R.id.buttonPlayAll).setOnClickListener(view -> {
-            String biName = editText.getText().toString();
 
             BIidx = 0;
 
@@ -223,7 +220,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                     Log.d(TAG, "[BI][TASK] le bi intermediate result "+s);
                 }
             });
-//            }
+
         } catch (Exception e) {
             Log.e(TAG, "Runbehaviour Probl with " + category + "\n" + Log.getStackTraceString(e));
             // reset
@@ -234,7 +231,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         /*** Stop BI ***/
         findViewById(R.id.buttonStop).setOnClickListener(view -> {
             // reset
-            //BIidx = 0;
+
             playAll = false;
             if (biTask != null)
                 biTask.stop();
@@ -272,7 +269,6 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             isreadingBI = true;
             // read BI
             readBI(biToPlay);
-            // Increment index
 
         });
 
@@ -343,7 +339,6 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
     private void readBI(String biName) {
         ImageView imageView =findViewById(R.id.imageView);
         PlayerView videoView=findViewById(R.id.videoView);
-        String docPath = "";
 
         String fileName =  biName;
         Log.i(TAG, "Runbehaviour Attempting " + biName);
@@ -385,7 +380,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                 @Override
                 public void onError(@NonNull String s) {
                     Log.e(TAG, "[BI][TASK] le bi error "+s);
-                    ongoingBI.setText("finished with error: " + biName);
+                    ongoingBI.setText("finished with error: " + s);
                     isreadingBI = false;
                 }
 
@@ -394,7 +389,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                     Log.d(TAG, "[BI][TASK] le bi intermediate result "+s);
                 }
             });
-//            }
+
         } catch (Exception e) {
             Log.e(TAG, "Runbehaviour Probl with " + biName + "\n" + Log.getStackTraceString(e));
             // reset
