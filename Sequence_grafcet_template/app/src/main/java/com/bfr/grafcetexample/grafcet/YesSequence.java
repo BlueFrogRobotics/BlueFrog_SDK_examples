@@ -140,6 +140,12 @@ public class YesSequence extends bfr_Grafcet {
                        // next step
                        step_num = 6;
                    }
+                    if(MvtAck.toUpperCase().contains("TIMEOUT"))
+                    {
+                        Log.i(name, "YES:" + "Timout waiting for OK -> Retry");
+                        // next step
+                        step_num = 4;
+                    }
                     break;
 
 
@@ -165,6 +171,12 @@ public class YesSequence extends bfr_Grafcet {
                     {
                         // next step
                         step_num = 9;
+                    }
+                    if(MvtAck.toUpperCase().contains("TIMEOUT"))
+                    {
+                        Log.i(name, "YES:" + "Timout waiting for OK -> Retry");
+                        // next step
+                        step_num = 7;
                     }
                     break;
 

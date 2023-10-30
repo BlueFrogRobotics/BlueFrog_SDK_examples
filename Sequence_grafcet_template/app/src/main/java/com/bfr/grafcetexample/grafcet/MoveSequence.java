@@ -129,10 +129,10 @@ public class MoveSequence extends bfr_Grafcet {
                             // next step
                             step_num = 6;
                         }
-                        if (timeout) {
-                            Log.i(name, "Rotate Left:" + "Timout waiting for OK");
+                        if (MvtAck.toUpperCase().contains("TIMEOUT")) {
+                            Log.i(name, "Rotate Left:" + "Timout waiting for OK -> Retry");
                             // next step
-                            step_num = 6;
+                            step_num = 4;
                         }
                         break;
 
@@ -168,10 +168,10 @@ public class MoveSequence extends bfr_Grafcet {
                             // next step
                             step_num = 9;
                         }
-                        if (timeout) {
-                            Log.i(name, "Rotate Right:" + "Timout waiting for OK");
+                        if (MvtAck.toUpperCase().contains("TIMEOUT")) {
+                            Log.i(name, "Rotate Right:" + "Timout waiting for OK -> Retry");
                             // next step
-                            step_num = 9;
+                            step_num = 7;
                         }
                         break;
 
