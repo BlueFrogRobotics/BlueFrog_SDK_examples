@@ -9,88 +9,164 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="187dp"
+        android:layout_height="550dp"
         android:visibility="invisible"
         tools:src="@tools:sample/avatars" />
 
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="268dp"
-        android:layout_marginTop="268dp"
-        android:text="Stop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/videoView"
-        android:layout_width="match_parent"
+        android:layout_width="700px"
         android:layout_height="match_parent"
         android:visibility="gone"
-        tools:layout_editor_absoluteY="130dp" >
+        tools:layout_editor_absoluteY="130dp"
+        tools:ignore="MissingConstraints">
 
     </com.google.android.exoplayer2.ui.PlayerView>
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="148dp"
-        android:text="Play"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonPlayAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="268dp"
-        android:text="Play All"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/buttonPlayAllFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="340dp"
-        android:text="Play All from"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/buttonCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:text="Play category" />
 
-    <EditText
-        android:id="@+id/editBIToPlay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="160dp"
-        android:background="#B1B1B1"
-        android:contentDescription="bi to play"
-        android:ems="10"
-        android:hint="bi to play"
-        android:inputType="textPersonName"
-        android:text="Happy01.xml"
-        app:layout_constraintStart_toEndOf="@+id/buttonPlay"
-        app:layout_constraintTop_toTopOf="parent" />
+            <EditText
+                android:id="@+id/editCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:background="#B1B1B1"
+                android:contentDescription="category"
+                android:ems="10"
+                android:hint="category"
+                android:inputType="textPersonName"
+                android:text="Happy" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/editBIToPlayFrom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="352dp"
-        android:background="#B1B1B1"
-        android:contentDescription="bi to play"
-        android:ems="10"
-        android:hint="bi to play"
-        android:inputType="textPersonName"
-        android:text="Happy.xml"
-        app:layout_constraintStart_toEndOf="@+id/buttonPlay"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:text="Play" />
+
+            <EditText
+                android:id="@+id/editBIToPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:background="#B1B1B1"
+                android:contentDescription="bi to play"
+                android:ems="10"
+                android:hint="bi to play"
+                android:inputType="textPersonName"
+                android:text="Happy01.xml" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ongoingBI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="#FAF8F8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPlayAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Play All" />
+
+            <Button
+                android:id="@+id/buttonStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stop" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Play/Next" />
+
+            <Button
+                android:id="@+id/buttonPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Play/Previous" />
+
+            <Button
+                android:id="@+id/buttonReplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Play again" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPlayAllFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="340dp"
+                android:text="Play All from" />
+
+            <EditText
+                android:id="@+id/editBIToPlayFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="92dp"
+                android:layout_marginTop="352dp"
+                android:background="#B1B1B1"
+                android:contentDescription="bi to play"
+                android:ems="10"
+                android:hint="bi to play"
+                android:inputType="textPersonName"
+                android:text="Happy.xml" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

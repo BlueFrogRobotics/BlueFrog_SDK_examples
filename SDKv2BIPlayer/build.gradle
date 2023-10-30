@@ -28,6 +28,12 @@ allprojects {
                 password "${maven_password}"
             }
         }
+        maven { url "https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-snapshot-local/"
+            credentials{
+                username "${maven_user}"
+                password "${maven_password}"
+            }
+        }
     }
 }
 
