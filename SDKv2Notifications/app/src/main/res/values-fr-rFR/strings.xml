@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SDKv2Notifications</string>
+    <string name="notif_title">Le nouveau message</string>
+    <string name="notif_text">text</string>
+</resources>
