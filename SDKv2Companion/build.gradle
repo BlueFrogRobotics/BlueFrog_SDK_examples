@@ -1,0 +1,38 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        google()
+        // to read credential local file
+        def gradlecredentials = "credentials.gradle"
+        if (project.file(gradlecredentials).exists()){
+            apply from: gradlecredentials
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.2'
+    }
+}
+allprojects {
+    repositories {
+
+        mavenCentral()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        // BFR SDK url
+        maven { url "https://bluefrogrobotics.jfrog.io/artifactory/bluefrogrobotics-libs-release-local/"
+            credentials{
+                username "${maven_user}"
+                password "${maven_password}"
+            }
+        }
+        google()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

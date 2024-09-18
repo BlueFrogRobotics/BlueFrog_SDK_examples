@@ -37,7 +37,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.Collator;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -50,7 +49,6 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
     private EditText editText;
     private EditText BItoPlayFrom;
     private EditText editCategory;
-
 
     private final int  STORAGE_PERMISSION_CODE = 101;
 
@@ -117,13 +115,15 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         // Get all comportemental in folder
         try {
             Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
-
+//             String[] listOfBI =  Files.list(Paths.get(_BI_FOLDER)).sorted().toArray();
+//             for (int i=0; i<listOfBI.length; i++)
+//                 Log.i(TAG, "BI found on device: " + listOfBI[i]);
         } catch (IOException e) {
             e.printStackTrace();
         }
         pathnames = dir.list();
         // populate list
-
+        int numOfBI =0;
         for (int i = 0; i < pathnames.length; i++)
         {
             // if the file is an xml (BI)
@@ -140,6 +140,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
 
         /*** play all BI ***/
         findViewById(R.id.buttonPlayAll).setOnClickListener(view -> {
+            String biName = editText.getText().toString();
 
             BIidx = 0;
 
@@ -147,7 +148,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             myscheduler.scheduleWithFixedDelay(new Runnable() {
                 @Override
                 public void run() {
-                    if (!isreadingBI) {
+                    if (isreadingBI == false) {
 
                         Log.w(TAG, "Run " + BINames.get(BIidx).toUpperCase());
                         // affect name of BI to read
@@ -173,8 +174,8 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             ImageView imageView =findViewById(R.id.imageView);
             PlayerView videoView=findViewById(R.id.videoView);
             String category = editCategory.getText().toString();
+            //interpreter.RunRandom(this, category, this, this, imageView, videoView);
             try{
-
             biTask = BuddySDK.Companion.createBICategoryTask(category, videoView, imageView);
             biTask.start(new TaskCallback() {
                 @Override
@@ -205,7 +206,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                     Log.d(TAG, "[BI][TASK] le bi intermediate result "+s);
                 }
             });
-
+//            }
         } catch (Exception e) {
             Log.e(TAG, "Runbehaviour Probl with " + category + "\n" + Log.getStackTraceString(e));
             // reset
@@ -216,7 +217,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
         /*** Stop BI ***/
         findViewById(R.id.buttonStop).setOnClickListener(view -> {
             // reset
-
+            //BIidx = 0;
             playAll = false;
             if (biTask != null)
                 biTask.stop();
@@ -254,6 +255,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             isreadingBI = true;
             // read BI
             readBI(biToPlay);
+            // Increment index
 
         });
 
@@ -292,7 +294,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
             myscheduler.scheduleWithFixedDelay(new Runnable() {
                 @Override
                 public void run() {
-                    if (!isreadingBI) {
+                    if (isreadingBI == false) {
 
                         Log.w(TAG, "Run " + BINames.get(BIidx).toUpperCase());
                         // affect name of BI to read
@@ -324,13 +326,15 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
     private void readBI(String biName) {
         ImageView imageView =findViewById(R.id.imageView);
         PlayerView videoView=findViewById(R.id.videoView);
+        String docPath = "";
 
         String fileName =  biName;
+        //File source = new File(fileName.replace(".xml", "")+".xml");
         Log.i(TAG, "Runbehaviour Attempting " + biName);
 
         try {
 
-            biTask = BuddySDK.Companion.createBITask(fileName, videoView, imageView);
+            biTask = BuddySDK.Companion.createBITask(fileName, videoView, imageView, true);
             biTask.start(new TaskCallback() {
                 @Override
                 public void onStarted() {
@@ -360,7 +364,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                 @Override
                 public void onError(@NonNull String s) {
                     Log.e(TAG, "[BI][TASK] le bi error "+s);
-                    ongoingBI.setText("finished with error: " + s);
+                    ongoingBI.setText("finished with error: " + biName);
                     isreadingBI = false;
                 }
 
@@ -369,7 +373,7 @@ public class MainActivity extends BuddyCompatActivity implements OnRunInstructio
                     Log.d(TAG, "[BI][TASK] le bi intermediate result "+s);
                 }
             });
-
+//            }
         } catch (Exception e) {
             Log.e(TAG, "Runbehaviour Probl with " + biName + "\n" + Log.getStackTraceString(e));
             // reset
