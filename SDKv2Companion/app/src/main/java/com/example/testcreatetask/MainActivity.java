@@ -90,7 +90,7 @@ public class MainActivity extends BuddyActivity {
             {
                 //init the task
                 //task = BuddySDK.Companion.createRandomStrollTask(null);
-                task = BuddySDK.Companion.createFollowMeTask(FollowMeMode.WATCH_ME, 7000L, null);
+                task = BuddySDK.Companion.createFollowMeTask(FollowMeMode.WATCH_ME,  null);
                 //start the task randomStrolleRandom
                 task.start(taskCallback);
             }catch (RuntimeException e)

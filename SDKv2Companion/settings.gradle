@@ -14,5 +14,5 @@ dependencyResolutionManagement {
         }
     }
 }
-rootProject.name = "launchfromsdk"
+rootProject.name = "CompanionFromsdk"
 include ':app'
