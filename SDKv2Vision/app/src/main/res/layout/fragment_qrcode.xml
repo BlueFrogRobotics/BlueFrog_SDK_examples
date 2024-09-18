@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,6 +10,61 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffff">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="QRCode" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="203dp"
+            android:layout_height="189dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="60dp"
+            android:background="#FFFFFF"
+            android:text=""
+            android:textColor="#000000"
+            app:layout_constraintEnd_toStartOf="@+id/previewCam"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/previewCam"
+            android:layout_width="365dp"
+            android:layout_height="230dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/detectbtn"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="240dp"
+            android:text="Detect QRCode"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/posebtn"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detectbtn"
+            android:layout_marginStart="24dp"
+            android:text="Estimate pose"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/detectbtn"
+            app:layout_constraintTop_toTopOf="@+id/detectbtn" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

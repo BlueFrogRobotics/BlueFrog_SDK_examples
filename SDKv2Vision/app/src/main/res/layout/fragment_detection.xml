@@ -127,42 +127,6 @@
             app:layout_constraintStart_toStartOf="@+id/buttonStop"
             app:layout_constraintTop_toBottomOf="@+id/buttonStop" />
 
-        <RadioGroup
-            android:id="@+id/cameraRadioGroup"
-            android:layout_width="128dp"
-            android:layout_height="75dp"
-            android:layout_marginTop="4dp"
-            app:layout_constraintEnd_toEndOf="@+id/previewCam"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintStart_toStartOf="@+id/previewCam"
-            app:layout_constraintTop_toBottomOf="@+id/previewCam">
-
-            <!--adding a radio button -->
-
-            <!--adding a radio button -->
-
-            <RadioButton
-                android:id="@+id/wideAngleRB"
-                android:layout_width="130dp"
-                android:layout_height="36dp"
-                android:checked="true"
-                android:padding="1dp"
-                android:text="Wide Angle"
-                android:textSize="14sp" />
-
-            <RadioButton
-                android:id="@+id/zoomRB"
-                android:layout_width="130dp"
-                android:layout_height="36dp"
-                android:checked="false"
-                android:padding="4dp"
-                android:text="Zoom"
-                android:textSize="14sp"
-                tools:layout_editor_absoluteX="475dp"
-                tools:layout_editor_absoluteY="237dp" />
-        </RadioGroup>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>

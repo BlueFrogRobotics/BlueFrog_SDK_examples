@@ -11,7 +11,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bfr.buddy.vision.shared.ArucoMarker;
 import com.bfr.buddy.vision.shared.Detections;
+import com.bfr.buddy.vision.shared.Pose;
 import com.bfr.buddysdk.BuddySDK;
 import com.bfr.sdkv2vision.R;
 
